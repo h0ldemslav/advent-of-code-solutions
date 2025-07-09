@@ -1,12 +1,6 @@
-const fs = require('node:fs');
+const { readInput } = require("../../utils");
 
-let data;
-try {
-    data = fs.readFileSync("./2015/day 1/input.txt", "utf-8").trim();
-} catch (err) {
-    console.error(err);
-}
-
+const data = readInput("./2015/day 1/input.txt");
 const FLOOR_UP = "(";
 const FLOOR_DOWN = ")";
 const BASEMENT = -1;
