@@ -11,12 +11,12 @@ for (let i = 0; i < list.length; i++) {
     w = Number(w);
     h = Number(h);
 
-    const surfaceArea = 2*l*w + 2*w*h + 2*h*l;
-    const smallestSideArea = Math.min(l*w, w*h, h*l);
+    const surfaceArea = 2 * l * w + 2 * w * h + 2 * h * l;
+    const smallestSideArea = Math.min(l * w, w * h, h * l);
     total += surfaceArea + smallestSideArea;
 
     const [minDim1, minDim2] = [l, w, h].sort((a, b) => a - b);
-    totalRibbon += minDim1+minDim1 + minDim2+minDim2 + l*w*h;
+    totalRibbon += minDim1 + minDim1 + minDim2 + minDim2 + l * w * h;
 }
 
 console.log(total);
